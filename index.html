@@ -1,0 +1,339 @@
+<!-- Copy this code and paste in your text-editor and see a responsive website with html and css for beginner
+
+Full Code written By ** Tarun Yadav **
+
+instagram: Code_creator1
+
+Notice -
+1. You can see a responsive navbar.
+2. Everycontent have a fixed position.
+3. If you see in phone or tablet in services section the article has border and  background color and image in top.
+4. If you see in computer or desktop in services section  the image is in left and right position and the border and background color are remove...
+5. all images except logo image are change while reload.
+6. When using template we can remove text and images and put our images in html code.
+7. I make it only with html and css without framework so you can read css also.
+8. I did not use many classes and id in this document.
+9. Document have some inline css also for that particular thing.
+-->
+
+
+<!doctype html>
+<html>
+<head><title>Responsive Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+* {
+margin:0px;
+padding:0px;
+}
+
+header {
+width:100vw;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+header::before{
+content:"";
+background-image:url('https://source.unsplash.com/1600x900/?food');
+background-size:cover;
+background-repeat:no-repeat;
+position:absolute;
+width:100vw;
+height:90vh;
+z-index:-1;
+left:0px;
+top:0px;
+opacity:0.5;
+border-radius:0px 0px 50% 50%;
+border-bottom:10px solid black;
+}
+
+#navbar {
+position:fixed;
+top:0px;
+left:0vw;
+width:100vw;
+}
+
+nav{
+background-color:rgba(0,0,0,0.6);
+display:flex;
+flex-direction:row;
+width:100vw;
+height:70px;
+align-items:center;
+overflow:hidden;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+flex-direction:row;
+padding:35px;
+}
+
+nav li{
+padding:30px;
+}
+
+nav ul a{
+text-decoration:none;
+color:white
+}
+
+nav img {
+margin-left:20px;
+box-sizing:border-box;
+}
+
+header div{
+display:flex;
+width:80vw;
+flex-direction:column;
+color:red;
+justify-content:center;
+align-items:center;
+}
+
+@media screen and (max-width: 700px) {
+nav {
+height:110px;
+flex-direction:column;
+}
+nav img {
+height:50px;
+margin-top:18px;
+}
+nav ul {
+position:absolute;
+top:0px;
+}
+nav li{
+padding:20px;
+padding-top:35px;
+}
+}
+
+section {
+display:flex;
+width:100vw;
+justify-content:center;
+flex-direction:column;
+}
+
+section h1 {
+margin-top:20px;
+font-size:3em;
+margin-left:auto;
+text-align:center;
+}
+
+section article {
+width:90vw;
+text-align:left;
+margin-top:100px;
+margin-left:5vw;
+display:flex;
+flex-direction:row;
+}
+article img {
+width:25vw;
+border-radius:7px;
+float:right;
+}
+.pic1{display:none}
+@media screen and (max-width: 850px) {
+article img{
+    width:50vw;
+    padding-left:20vw;
+   
+}
+.pic{display:none}
+.pic1{display:block}
+section article {
+    width:95vw;
+    text-align:center;
+    margin-left:2.5vw;
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    border:1px solid black;
+    border-radius:5px;
+    background-color: #fff0c0;
+}
+}
+
+.about {
+display:flex;
+flex-direction:column;
+width:90vw;
+border:5px solid black;
+ background-color: #efb068;
+border-radius:10px;
+margin-left:4vw;
+margin-top:50px;
+}
+
+.contact {
+display:flex;
+flex-direction:column;
+width:90vw;
+border:5px solid black;
+background-color: #e4dfda;
+border-radius:10px;
+margin-left:4vw;
+margin-top:50px;
+padding-top:30px;
+text-align:center;
+justify-content:center;
+}
+
+.contact h1{
+margin-top:20px;
+margin-left:2vw;
+}
+
+.contact input[type="text"] {
+width:86vw;
+height:50px;
+border-radius:20px;
+padding-left:10px;
+font-size:26px;
+font-weight:bold;
+}
+
+.contact button{
+width:100px;
+height:100px;
+border:2px solid black;
+border-radius:10px;
+font-size:25px;
+font-weight:bold;
+margin-top:15px;
+margin-bottom:15px;
+background-color:red;
+color:white;
+align-self:center;
+}
+.contact button:hover{
+color:red;
+background-color:white;
+border:5px solid red;
+}
+
+#nav1:hover{color:red;}
+#nav2:hover{color:red;}
+#nav3:hover{color:red;}
+#nav4:hover{color:red;}
+
+</style>
+</head>
+<body>
+<a name="home">
+<header>
+<div id="navbar">
+<nav>
+<img src="https://i.ibb.co/LRVRgZ0/logotarun.jpg" width="50px" height="50px" style="border-radius:50%;border:2px solid black;"/>
+<ul>
+<li><a href="#home" id="nav1">Home</a></li>
+<li><a href="#services" id="nav2">Services</a></li>
+<li><a href="#about" id="nav3">About</a></li>
+<li><a href="#contact" id="nav4">Contact</a></li>
+</ul>
+</nav></div>
+<div style="font-size:23px;">
+<h1>Welcome to our Website</h1>
+<p style="text-align:center;color:green;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla pellentesque libero, id varius purus tristique id. Nunc varius dignissim turpis sed bibendum. Nulla ut volutpat quam, vel pulvinar neque.</p>
+
+</div>
+</header></a>
+
+<section><a name="services"><br>
+<h1 class="headi">Our Services</h1>
+<br>
+<article>
+<img src="https://source.unsplash.com/1600x900/?pizza" style="height:40vh;"/>
+<div>
+<h1 style="font:size:20px;margin-top:-10px;"> Cheese Pizza</h1>
+<p style="font-size:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu dapibus tortor, sit amet mollis nunc. Morbi eget eros at mi ullamcorper egestas a dapibus turpis. Cras dignissim massa eget tellus malesuada lacinia. Aliquam tristique nulla eu justo dictum posuere. Suspendisse id ex porta, tristique sem a, tristique leo. Ut elit erat, cursus ac justo in, aliquet ullamcorper orci. Nullam vel nisl euismod, suscipit nibh non, faucibus dui. Aenean et velit quis erat commodo aliquam non eget risus. Quisque aliquet varius cursus. Vestibulum ultricies a purus vel sagittis. Proin mollis maximus lorem et pretium.</p>
+</div>
+</article>
+
+<article>
+<img src="https://source.unsplash.com/1600x900/?burger" style="height:40vh;" class="pic1"/>
+<div>
+<img src="https://source.unsplash.com/1600x900/?burger" style="height:40vh;" class="pic"/>
+<h1 style="font:size:20px;margin-top:-10px;">Burger</h1>
+<p style="font-size:20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu dapibus tortor, sit amet mollis nunc. Morbi eget eros at mi ullamcorper egestas a dapibus turpis. Cras dignissim massa eget tellus malesuada lacinia. Aliquam tristique nulla eu justo dictum posuere. Suspendisse id ex porta, tristique sem a, tristique leo. Ut elit erat, cursus ac justo in, aliquet ullamcorper orci. Nullam vel nisl euismod, suscipit nibh non, faucibus dui. Aenean et velit quis erat commodo aliquam non eget risus. Quisque aliquet varius cursus. Vestibulum ultricies a purus vel sagittis. Proin mollis maximus lorem et pretium.</p></div>
+</article>
+
+<article>
+<img src="https://source.unsplash.com/1600x900/?cream" style="height:40vh;"/>
+<div>
+<h1 style="font:size:20px;margin-top:-10px;">Ice Cream</h1>
+<p style="font-size:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu dapibus tortor, sit amet mollis nunc. Morbi eget eros at mi ullamcorper egestas a dapibus turpis. Cras dignissim massa eget tellus malesuada lacinia. Aliquam tristique nulla eu justo dictum posuere. Suspendisse id ex porta, tristique sem a, tristique leo. Ut elit erat, cursus ac justo in, aliquet ullamcorper orci. Nullam vel nisl euismod, suscipit nibh non, faucibus dui. Aenean et velit quis erat commodo aliquam non eget risus. Quisque aliquet varius cursus. Vestibulum ultricies a purus vel sagittis. Proin mollis maximus lorem et pretium.</p>
+</div>
+</article>
+
+<article>
+<img src="https://source.unsplash.com/1600x900/?juice" style="height:40vh;" class="pic1"/>
+<div>
+<img src="https://source.unsplash.com/1600x900/?juice" style="height:40vh;" class="pic"/>
+<h1 style="font:size:20px;margin-top:-10px;">Jucies</h1>
+<p style="font-size:20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu dapibus tortor, sit amet mollis nunc. Morbi eget eros at mi ullamcorper egestas a dapibus turpis. Cras dignissim massa eget tellus malesuada lacinia. Aliquam tristique nulla eu justo dictum posuere. Suspendisse id ex porta, tristique sem a, tristique leo. Ut elit erat, cursus ac justo in, aliquet ullamcorper orci. Nullam vel nisl euismod, suscipit nibh non, faucibus dui. Aenean et velit quis erat commodo aliquam non eget risus. Quisque aliquet varius cursus. Vestibulum ultricies a purus vel sagittis. Proin mollis maximus lorem et pretium.</p>
+</article></div>
+</a>
+<a name="about">
+<h1 class="headi">About</h1>
+<div class="about">
+<h1 class="headi">Here are some rules and facilities of our restaurant.</h1>
+<p>
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+<br><br>
+2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+<br><br>
+3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+<br><br>
+4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+<br><br>
+6. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+<br><br>
+7. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+<br><br>
+8. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+9. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+<br><br>
+10. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+<br><br>
+11. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+<br><br>
+12. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis dui tincidunt justo bibendum iaculis. Nunc quis vehicula erat. Aenean sit amet scelerisque elit. Integer luctus sit amet tortor nec molestie. Maecenas eleifend neque feugiat, dapibus turpis quis, dignissim sapien. Proin tincidunt, ligula in euismod sollicitudin, tortor lacus hendrerit justo, id condimentum ante sem quis ligula.
+</p>
+</div></a>
+<a name="contact">
+<h1 class="headi">Contact us</h1>
+<div class="contact">
+<h2>First Name</h2><br>
+<input type="text" placeholder="Tarun"/>
+<br>
+<h2>Second Name</h2><br>
+<input type="text" placeholder="Yadav"/>
+<br>
+<h2>Email Address</h2><br>
+<input type="text" placeholder="name243@gamil.com"/>
+<br>
+<h2>Phone Number</h2><br>
+<input type="text" placeholder="number"/>
+<br>
+<h2>Subject</h2><br>
+<input type="text" placeholder="Enter your subject..." style=" height:200px;overflow:none;"/>
+<button type="sumbit">Submit</button>
+</div>
+</a></section>
+</body>
+</html>
